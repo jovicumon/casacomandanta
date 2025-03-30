@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* ------------- RESET DE ESTILOS ------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* ------------- HEADER ------------- */
+  header {
+    background: white;
+    color: #009688;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+  
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  
+  /* ------------- NAVBAR ------------- */
+  nav {
+    background-color: #009688;
+    padding: 10px 0;
+  }
+  
+  .nav-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    list-style: none;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+
+/* Estilo para el botón hamburguesa */
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  display: none; /* Ocultar en pantallas grandes */
+  padding: 10px;
+}
+.hamburger:hover {
+  color: #ffc107;
+}
+  
+  /* ------------- SECCIONES ------------- */
+  section {
+    background: white;
+    padding: 20px;
+    margin:0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .image-container {
+    position: relative; /* Permite posicionamiento absoluto para la imagen de ubicación */
+    padding-top: 10px;
+  }
+
+  figure {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  figure img {
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  /* Sección de ubicación */
+  .location-link {
+    position: absolute; /* Posiciona la imagen de ubicación arriba a la derecha */
+    top: 10px; /* Espaciado desde la parte superior del contenedor */
+    right: 10px; /* Espaciado desde el borde derecho */
+    text-align: center; /* Centra el texto debajo de la imagen */
+  }
+
+  .location-section {
+    margin-top: 20px; /* Separa la imagen de la barra de navegación */
+    text-align: right; /* Alinea la imagen a la derecha */
+    padding-right: 20px; /* Da espacio desde el borde derecho */
+  }
+
+  .location-content {
+    display: flex;
+    flex-direction: column; /* Apila la imagen y el texto */
+    align-items: center; /* Asegura que estén alineados en el centro */
+  }
+
+  .location-image {
+    width: 120px; /* Tamaño reducido para la imagen */
+    height: auto; /* Mantén proporciones */
+    border-radius: 8px; /* Borde redondeado para estética */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    transition: transform 0.3s ease; /* Animación suave al interactuar */
+  }
+  
+  .location-image:hover {
+    transform: scale(1.1); /* Aumenta ligeramente al pasar el cursor */
+  }
+  .location-text {
+  margin-top: 5px; /* Espacio entre la imagen y el texto */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333; /* Color estándar para fondo claro */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  align-items: center;
+  gap: 5px; /* Espacio entre el icono y el texto */
+}
+  .gradient-bg{
+    background: linear-gradient(to bottom, white, #b2dfdb);
+  }
+
+  .gradient-bg h3{
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px auto;
+  }
+
+/* Contenedor principal del carrusel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Carrusel que contiene las imágenes */
+.carousel {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  min-width: 100%;
+  height: 400px;
+  display: flex; /* Usamos flexbox para centrar */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Evita que se vea la siguiente imagen */
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta la imagen sin deformarla */
+  object-position: center;
+}
+
+/* Botones de navegación */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #bdbdbd5b;
+  transition: opacity 0.3s;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 20px;
+  z-index: 2;
+}
+
+.prev:hover, .next:hover {
+  background-color: #BDBDBD;
+  opacity: 0.3;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Fondo con imagen para la sección de eventos */
+.eventos-section {
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #ffc107;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: 90%;
+  }
+  
+  p {
+    max-width: 600px;
+    padding: 0 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Fondo con imagen para la sección de contacto*/
+.logo-bg {
+  position: relative; 
+  z-index: 1;
+}
+
+.logo-bg::before {
+  content: "";
+  background: url('images/logo.png') no-repeat center;
+  background-size: contain; 
+  opacity: 0.1; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+  /* ------------- FORMULARIOS ------------- */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #3f51b5;
+    outline: none;
+  }
+  
+  input[type="submit"] {
+    background-color: #009688;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+  }
+  
+  .error {
+    border: 2px solid red !important;
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+
+/* ------------- CONTADORES RESPONSIVE ------------- */
+.contador-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px 20px;
+  background: rgba(0, 150, 136, 0.9);
+  color: white;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 90%;
+  margin: 40px auto 60px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contador-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  min-width: 80px;
+}
+
+.contador {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #ffc107;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.contador-item p {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+
+  /* ------------- FOOTER ------------- */
+ /* Footer General */
+footer {
+  background-color: #B2DFDB;
+  color: #00796B;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Contenedor principal del footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Enlaces de políticas y condiciones */
+.footer-links {
+  width: 66.66%;
+  text-align: left;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #00796B;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Redes sociales y contacto */
+.footer-social {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer-social i {
+  display: inline-block;
+}
+.footer-social a {
+  color: #00796B;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #ff4081;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en una columna */
+  gap: 10px; /* Espacio entre las redes y el teléfono */
+  align-items: center; /* Centra el contenido */
+  font-size: 16px;
+  color: #00796B;
+}
+.social-container i {
+  font-size: 20px;
+  color: #00796B; 
+}
+.phone-container {
+  display: flex; /* Alinea el ícono y el número horizontalmente */
+  align-items: center;
+  gap: 10px; /* Espacio entre el ícono y el número */
+}
+
+.footer-social p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Copyright en gris pequeño y centrado */
+.footer-copyright {
+  color: #00796B;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+  
+  /* ------------- RESPONSIVE DESIGN ------------- */
+  @media (max-width: 768px) {
+    figure {
+      width: 95%;
+      margin: 15px auto;
+    }
+    
+    figure img {
+      border-radius: 5px;
+    }
+    
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      display: none; /* Ocultar por defecto */
+    }
+  
+    .nav-menu li {
+      margin-bottom: 8px;
+    }
+    
+    .nav-menu.active {
+      display: flex; /* Mostrar al activarlo */
+    }
+
+    .hamburger {
+      display: block; /* Mostrar el botón hamburguesa */
+    }
+    .location-image {
+      display: none; /* Oculta la imagen */
+    }
+  
+    .location-text {
+      font-size: 16px; /* Ajusta el tamaño del texto para destacarlo más */
+      color: #009688; /* Cambia el color para hacerlo más llamativo */
+    }
+    .contador-container {
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .contador-item {
+      min-width: 70px;
+      font-size: 0.9rem;
+    }
+
+    .contador {
+      font-size: 1.2rem;
+      padding: 3px 8px;
+    }
+
+    .location-link {
+      position: static;
+      margin: 10px auto; /* Centra la imagen */
+      display: block; /* Asegura que no se desplace fuera de la vista */
+      text-align: center;
+    }
+  
+    .location-image {
+      width: 100%; /* Ocupa el ancho disponible */
+      max-width: 300px; /* Tamaño máximo */
+    }
+    .social-container p {
+      font-size: 0; /* Oculta el número al reducir el tamaño a 0 */
+      visibility: hidden; /* Asegura que no se muestre */
+    }
+  
+    .social-container i {
+      font-size: 18px; /* Aumenta el tamaño del ícono para destacarlo */
+      color: #009688; /* Cambia el color para hacerlo llamativo */
+    }
+    .phone-number {
+      font-size: 12px;
+      display: none; /* Oculta el número */
+    }
+  
+    .phone-container {
+      font-size: 12px;
+      text-decoration: none; /* Quita el subrayado del enlace */
+      color: inherit; /* Mantén el color del texto actual */
+      display: flex; /* Alinea el ícono y el número horizontalmente */
+      align-items: center;
+      gap: 5px; /* Espacio entre el ícono y el número */
+    }
+    .phone-container:hover i {
+      color: #009688; /* Cambia el color del ícono al pasar el cursor */
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .phone-container:hover .phone-number {
+      text-decoration: underline; /* Subraya el número al pasar el cursor */
+    }
+  }
+  @media (max-width: 480px) {
+    .contador-container {
+      gap: 5px;
+      width: 95%;
+    }
+  
+    .contador-item {
+      min-width: 60px;
+      font-size: 0.8rem;
+    }
+  
+    .contador {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .contador-item {
+      min-width: 50px !important;
+    }
+  }
+  
+  /* ------------- MODO OSCURO ------------- */
+.dark-mode {
+  background-color: #222;
+  color: #f5f5f5;
+}
+
+.dark-mode section,
+.dark-mode header,
+.dark-mode footer {
+  background-color: #333;
+}
+#dark-mode-toggle {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#dark-mode-toggle i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Cambia el color del icono en modo oscuro */
+.dark-mode #dark-mode-toggle i {
+  color: #ffc107;
+}
+
+#dark-mode-toggle:hover {
+  transform: scale(1.1);
+}
+.dark-mode .location-text {
+  color: #f5f5f5; /* Color claro para fondo oscuro */
+}  

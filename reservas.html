@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas - Casa Comandanta</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/logo.png" alt="Logo de Casa Comandanta" class="logo" />
+      <h1>Reservas</h1>
+    </div>
+  </header>
+  <nav>
+    <div class="nav-header">
+      <button class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="reservas.html"><i class="fa fa-calendar-check"></i> Reservas</a></li>
+      <li><a href="eventos.html"><i class="fa fa-image"></i> Eventos</a></li>
+      <li><a href="contacto.html"><i class="fa fa-envelope"></i> Contacto</a></li>
+      <li><a href="#" id="dark-mode-toggle"><i class="fas fa-moon"></i></a></li>
+    </ul>
+  </nav>
+  <section class="gradient-bg">
+    <h2>Realiza tu Reserva</h2>
+    <p>Completa el formulario para reservar tu estancia o espacio para eventos.</p>
+    <form action="procesar_reserva.php" method="post">
+      <br />
+      <label for="nombre">Nombre:</label><br />
+      <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+      <label for="email">Correo electrónico:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="fecha">Fecha de reserva:</label><br />
+      <input type="date" id="fecha" name="fecha" required /><br /><br />
+
+      <label for="tipo">Tipo de reserva:</label><br />
+      <select id="tipo" name="tipo">
+        <option value="alojamiento">Alojamiento</option>
+        <option value="evento">Evento</option>
+      </select><br /><br />
+
+      <label for="comentarios">Comentarios:</label><br />
+      <textarea id="comentarios" name="mensaje" maxlength="300" required></textarea>
+      <p id="contador-caracteres">300 caracteres restantes</p>
+      <br /><br />
+
+      <input type="submit" value="Enviar Reserva" />
+    </form>
+  </section>
+  <footer></footer>
+  <script src="scripts.js" defer></script>
+</body>
+</html>

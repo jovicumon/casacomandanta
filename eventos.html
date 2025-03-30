@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos - Casa Comandanta</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/logo.png" alt="Logo de Casa Comandanta" class="logo" />
+      <h1>Eventos</h1>
+    </div>
+  </header>
+  <nav>
+    <div class="nav-header">
+      <button class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="reservas.html"><i class="fa fa-calendar-check"></i> Reservas</a></li>
+      <li><a href="eventos.html"><i class="fa fa-image"></i> Eventos</a></li>
+      <li><a href="contacto.html"><i class="fa fa-envelope"></i> Contacto</a></li>
+      <li><a href="#" id="dark-mode-toggle"><i class="fas fa-moon"></i></a></li>
+    </ul>
+  </nav>
+
+  <section class="gradient-bg">
+    <h2>Zona Exterior</h2>
+    <h3>Espacios para Eventos</h3>
+    <p>En Casa Comandanta ofrecemos espacios ideales para reuniones, bodas y fiestas.</p>
+
+    
+
+    <!-- Carrusel Zona Exterior -->
+    <div class="carousel-container">
+      <div id="carousel-exterior" class="carousel-wrapper">
+        <div class="carousel-item"> <img src="images/evento_exterior1.jpeg" alt="Zona exterior 1"></div>
+        <div class="carousel-item"> <img src="images/evento_exterior2.jpeg" alt="Zona exterior 2"></div>
+      </div>
+      <button class="prev" data-carrusel="exterior">◀</button>
+      <button class="next" data-carrusel="exterior">▶</button>
+    </div>
+
+    <h2>Zona Interior</h2>
+    <h3>2 dormitorios, cocina, salón y baño</h3>
+    <p>Ideal para escapadas en familia o amigos.</p>    
+
+    <!-- Carrusel Zona Interior -->
+    <div class="carousel-container">
+      <div id="carousel-interior" class="carousel-wrapper">
+        <div class="carousel-item"> <img src="images/evento_interior1.jpeg" alt="Salón interior 1"></div>
+        <div class="carousel-item"> <img src="images/evento_interior2.jpeg" alt="Salón interior 2"></div>
+        <div class="carousel-item"> <img src="images/evento_interior3.jpeg" alt="Salón interior 3"></div>
+        <div class="carousel-item"> <img src="images/evento_interior4.jpeg" alt="Salón interior 4"></div>
+        <div class="carousel-item"> <img src="images/evento_interior5.jpeg" alt="Salón interior 5"></div>
+        <div class="carousel-item"> <img src="images/evento_interior6.jpeg" alt="Salón interior 6"></div>
+        <div class="carousel-item"> <img src="images/evento_interior7.jpeg" alt="Salón interior 7"></div>
+        <div class="carousel-item"> <img src="images/evento_interior8.jpeg" alt="Salón interior 8"></div>
+      </div>
+      <button class="prev" data-carrusel="interior">◀</button>
+      <button class="next" data-carrusel="interior">▶</button>
+    </div>
+  </section>
+  <footer></footer>
+  <script src="scripts.js" defer></script>
+</body>
+</html>
