@@ -595,24 +595,115 @@ footer {
 .dark-mode footer {
   background-color: #333;
 }
+.dark-mode .logo-bg {
+  background-color: #333;
+  color: #f5f5f5;
+}
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode p {
+  color: #f5f5f5; 
+}
+.dark-mode a {
+  color: #ffc107; /* Destaca los enlaces */
+}
+.dark-mode a:hover {
+  color: #ff4081; /* Color de hover para enlaces */
+}
 #dark-mode-toggle {
   position: relative;
   transition: all 0.3s ease;
 }
-
 #dark-mode-toggle i {
   font-size: 1.2rem;
   color: white;
 }
-
 /* Cambia el color del icono en modo oscuro */
 .dark-mode #dark-mode-toggle i {
-  color: #ffc107;
+  color: #ffc107; /* Color claro y visible */
+  font-size: 1.5rem; /* Tamaño destacado */
+  transition: all 0.3s ease; /* Suaviza cualquier cambio */
 }
 
-#dark-mode-toggle:hover {
-  transform: scale(1.1);
+.dark-mode #dark-mode-toggle:hover i {
+  color: #ff4081; /* Cambia el color en hover */
+  transform: scale(1.1); /* Ligeramente más grande */
 }
 .dark-mode .location-text {
   color: #f5f5f5; /* Color claro para fondo oscuro */
-}  
+}
+.dark-mode .gradient-bg {
+  background: linear-gradient(to bottom, #333, #333); /* Fondo oscuro */
+  color: #f5f5f5; /* Texto claro */
+}
+
+.dark-mode .gradient-bg h3,
+.dark-mode .gradient-bg p {
+  color: #f5f5f5; /* Ajuste del color del texto */
+}
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background-color: #333; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+  border: 1px solid #555; /* Bordes visibles */
+}
+
+.dark-mode input::placeholder, 
+.dark-mode textarea::placeholder {
+  color: #aaa; /* Placeholder claro */
+}
+
+.dark-mode input[type="submit"] {
+  background-color: #ffc107; /* Botón destacado */
+  color: #222; /* Contraste con el fondo */
+  border: none;
+}
+
+.dark-mode input[type="submit"]:hover {
+  background-color: #ff4081; /* Color de hover */
+  color: white;
+}
+.dark-mode .contador-container {
+  background-color: #333; /* Fondo del contenedor */
+  color: #ffffff; /* Color del texto */
+}
+
+.dark-mode .contador-item p, 
+.dark-mode .contador {
+  color: #00796B; /* Color del texto y valores de los contadores */
+}
+.dark-mode .footer-social i {
+  color: #ffc107; /* Color claro para modo oscuro */
+  font-size: 24px; /* Tamaño adecuado */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode .footer-social a {
+  display: inline-block; /* Asegura la visibilidad del enlace */
+  color: #ffc107;
+  text-decoration: none; /* Sin subrayado */
+}
+
+.dark-mode .footer-social i:hover {
+  color: #ff4081; /* Cambia el color en hover */
+  transform: scale(1.2); /* Efecto de agrandamiento */
+}
+.dark-mode .phone-container {
+  color: #ffc107; /* Color inicial en modo oscuro */
+  text-decoration: none; /* Sin subrayado */
+  display: flex; /* Asegura que el diseño se mantenga horizontal */
+  align-items: center;
+  gap: 10px; /* Espacio entre ícono y número */
+}
+
+.dark-mode .phone-container:hover i {
+  color: #ff4081; /* Color del ícono al pasar el cursor */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode .phone-container:hover .phone-number {
+  color: #ff4081; /* Cambia el color del número al hacer hover */
+  text-decoration: underline; /* Subraya el texto al pasar el cursor */
+}
