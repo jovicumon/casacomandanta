@@ -583,6 +583,26 @@ footer {
       min-width: 50px !important;
     }
   }
+  @media (max-width: 820px) {
+    .location-link {
+      position: static; /* Quita la posición absoluta para evitar superposición */
+      margin: 20px auto; /* Centra el enlace */
+      display: block; /* Asegura que se muestre como bloque */
+      text-align: center; /* Centra el contenido */
+    }
+  
+    .location-image {
+      display: none; /* Oculta la imagen para que solo se muestre el enlace */
+    }
+  
+    .location-text {
+      display: inline-block; /* Asegura que el texto sea visible */
+      font-size: 16px; /* Ajusta el tamaño del texto */
+      color: #009688; /* Asegura un color visible */
+      text-decoration: underline; /* Opcional: da a entender que es un enlace */
+      font-weight: bold; /* Para destacar el texto */
+    }
+  }
   
   /* ------------- MODO OSCURO ------------- */
 .dark-mode {
