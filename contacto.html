@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Casa Comandanta</title>
-  <link rel="icon" href="images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <div class="header-content">
-      <img src="images/logo.png" alt="Logo de Casa Comandanta" class="logo" />
+      <img src="images/logo.png" alt="Logo de Casa Comandanta" class="logo">
       <h1>Contacto</h1>
     </div>
   </header>
@@ -36,18 +36,17 @@
       <p><strong>Email:</strong> <a href="mailto:info@casacomandanta.es">info@casacomandanta.es</a></p>
     </address>
     <form action="procesar_contacto.php" method="post">
-      <label for="nombre">Nombre:</label><br />
-      <input type="text" id="nombre" name="nombre" required /><br /><br />
-
-      <label for="email">Correo electrónico:</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
-
-      <label for="mensaje">Mensaje:</label><br />
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+    
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+    
+      <label for="comentarios">Mensaje:</label><br>
       <textarea id="comentarios" name="mensaje" maxlength="300" required></textarea>
-      <p id="contador-caracteres">300 caracteres restantes</p>
-      <br /><br />
-
-      <input type="submit" value="Enviar" />
+      <p id="contador-caracteres">300 caracteres restantes</p><br><br>
+    
+      <input type="submit" value="Enviar">
     </form>
   </section>
   <footer></footer>

@@ -419,16 +419,21 @@ footer {
   text-align: center;
 }
 .footer-social i {
-  display: inline-block;
+  color: #00796B; /* Color inicial */
+  font-size: 28px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 .footer-social a {
+  display: inline-block; /* Asegura que sean elementos clicables */
   color: #00796B;
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .footer-social a:hover {
   color: #ff4081;
+  transform: scale(1.2);
 }
 
 .social-container {
@@ -442,6 +447,9 @@ footer {
 .social-container i {
   font-size: 20px;
   color: #00796B; 
+}
+.social-container i:hover {
+  color: #ff4081; 
 }
 .phone-container {
   display: flex; /* Alinea el ícono y el número horizontalmente */
